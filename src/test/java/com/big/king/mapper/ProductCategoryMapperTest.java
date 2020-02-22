@@ -1,6 +1,6 @@
-package com.biggg.king.mapper;
+package com.big.king.mapper;
 
-import com.biggg.king.pojo.ProductCategory;
+import com.big.king.pojo.ProductCategory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -25,7 +25,7 @@ public class ProductCategoryMapperTest {
     public void queryProductCategories() {
 
         try {
-            ProductCategory productCategoryList = productCategoryMapper.queryProductCategoryOne("1");
+            ProductCategory productCategoryList = productCategoryMapper.queryProductCategoryOne(1);
             logger.info("mybatis 查询测试：" + productCategoryList.toString());
 
         } catch (Exception e) {

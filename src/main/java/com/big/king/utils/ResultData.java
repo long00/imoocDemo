@@ -1,4 +1,4 @@
-package com.biggg.king.utils;
+package com.big.king.utils;
 import java.io.Serializable;
 
 /**

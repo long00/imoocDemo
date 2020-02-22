@@ -1,14 +1,16 @@
-package com.biggg.king.controller;
+package com.big.king.controller;
 
-import com.biggg.king.pojo.ProductCategory;
-import com.biggg.king.service.ProductCategoryService;
-import com.biggg.king.service.impl.ProductCategoryServiceImpl;
-import com.biggg.king.utils.ResultData;
+import com.big.king.pojo.ProductCategory;
+import com.big.king.service.ProductCategoryService;
+import com.big.king.service.impl.ProductCategoryServiceImpl;
+import com.big.king.utils.ResultData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 /**
@@ -37,7 +39,7 @@ public class ProductCategoryController {
     */
     @GetMapping("/category/{category_id}")
     @ResponseStatus(HttpStatus.OK)
-    public ResultData findOne(@PathVariable("category_id") String category_id){
+    public ResultData findOne(@PathVariable("category_id") Integer category_id){
 
         try {
             logger.info("传递进来的商品ID:{}",category_id);
@@ -46,6 +48,27 @@ public class ProductCategoryController {
         } catch (Exception e) {
             e.printStackTrace();
             return ResultData.ERROR("300","");
+        }
+
+    }
+
+
+    /**
+    * @Description 查询所有信息
+    * @Author  yangtenglong
+    * @Date   2020/2/22 22:14
+    *
+    */
+    @GetMapping("/category")
+    public ResultData getAll(){
+
+        try {
+            logger.info("查询所有信息");
+            List<ProductCategory> categoryList = productCategoryService.findAll();
+            return ResultData.SUCCESS(categoryList);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultData.ERROR("300","系统异常");
         }
 
     }

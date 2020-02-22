@@ -8,11 +8,11 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.biggg.king.service.impl;
+package com.big.king.service.impl;
 
-import com.biggg.king.mapper.ProductCategoryMapper;
-import com.biggg.king.pojo.ProductCategory;
-import com.biggg.king.service.ProductCategoryService;
+import com.big.king.mapper.ProductCategoryMapper;
+import com.big.king.pojo.ProductCategory;
+import com.big.king.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,9 +30,9 @@ import java.util.List;
 @Service
 public class ProductCategoryServiceImpl implements ProductCategoryService {
 
+
     @Autowired
     ProductCategoryMapper productCategoryMapper;
-
     private ProductCategory productCategory;
 
     /**
@@ -42,7 +42,7 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
      * @Date 2020/2/19 9:35
      */
     @Override
-    public ProductCategory findOne(String category_id) {
+    public ProductCategory findOne(Integer category_id) {
 
         return productCategoryMapper.queryProductCategoryOne(category_id);
     }
@@ -54,7 +54,8 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
      */
     @Override
     public List<ProductCategory> findAll() {
-        return null;
+
+        return productCategoryMapper.queryAllProductCategory();
     }
 
     /**

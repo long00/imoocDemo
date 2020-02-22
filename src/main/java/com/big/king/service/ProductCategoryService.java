@@ -1,6 +1,6 @@
-package com.biggg.king.service;
+package com.big.king.service;
 
-import com.biggg.king.pojo.ProductCategory;
+import com.big.king.pojo.ProductCategory;
 
 import java.util.List;
  /**
@@ -18,7 +18,7 @@ public interface ProductCategoryService {
     * @Date   2020/2/19 9:35
     * 
     */
-    public ProductCategory findOne(String category_id);
+    public ProductCategory findOne(Integer category_id);
 
     
 
