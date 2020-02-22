@@ -8,7 +8,7 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.biggg.king.dao.mapper;
+package com.biggg.king.mapper;
 
 import com.biggg.king.pojo.ProductCategory;
 import org.apache.ibatis.annotations.Param;

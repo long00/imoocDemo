@@ -10,7 +10,7 @@
  */
 package com.biggg.king.service.impl;
 
-import com.biggg.king.dao.mapper.ProductCategoryMapper;
+import com.biggg.king.mapper.ProductCategoryMapper;
 import com.biggg.king.pojo.ProductCategory;
 import com.biggg.king.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
