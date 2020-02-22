@@ -11,6 +11,7 @@
 package com.biggg.king.dao.mapper;
 
 import com.biggg.king.pojo.ProductCategory;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -26,8 +27,8 @@ import java.util.List;
  */
 public interface ProductCategoryMapper {
 
-    @Select("SELECT * FROM `product_category`")
-    List<ProductCategory> queryProductCategoryList();
+    @Select("SELECT category_id,category_name,category_type FROM product_category WHERE category_id=#{category_id}")
+    ProductCategory queryProductCategoryOne(@Param("category_id") String category_id);
 
     @Update("INSERT INTO product_category(category_name,category_type) VALUES (#{category_name}, #{category_type})")
     int addProductCategory(ProductCategory productCategory);

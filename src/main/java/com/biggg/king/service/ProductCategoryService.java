@@ -18,7 +18,7 @@ public interface ProductCategoryService {
     * @Date   2020/2/19 9:35
     * 
     */
-    public ProductCategory findOne(Integer category_id);
+    public ProductCategory findOne(String category_id);
 
     
 
@@ -40,5 +40,13 @@ public interface ProductCategoryService {
     */
     List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
 
+    
+    /**
+    * @Description 保存方法
+    * @Author  yangtenglong
+    * @Date   2020/2/22 17:16
+    * 
+    */
+     ProductCategory save(ProductCategory productCategory);
     
 }

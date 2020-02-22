@@ -73,7 +73,4 @@ public class ProductCategory {
                 '}';
     }
 
-    public ProductCategory() {
-
-    }
 }

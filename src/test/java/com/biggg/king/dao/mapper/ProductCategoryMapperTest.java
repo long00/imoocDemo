@@ -19,7 +19,6 @@ public class ProductCategoryMapperTest {
 
     private Logger logger = LoggerFactory.getLogger(ProductCategoryMapperTest.class);
 
-    @Autowired
     private ProductCategoryMapper productCategoryMapper;
 
     /**
@@ -29,7 +28,7 @@ public class ProductCategoryMapperTest {
     public void queryProductCategories() {
 
         try {
-            List<ProductCategory> productCategoryList = productCategoryMapper.queryProductCategoryList();
+            ProductCategory productCategoryList = productCategoryMapper.queryProductCategoryOne("1");
             logger.info("mybatis 查询测试：" + productCategoryList.toString());
 
         } catch (Exception e) {
