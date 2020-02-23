@@ -1,10 +1,7 @@
 package com.big.king.mapper;
 
 import com.big.king.pojo.po.ProductCategory;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -23,7 +20,15 @@ public interface ProductCategoryMapper {
     @Select("SELECT category_id,category_name,category_type FROM product_category")
     List<ProductCategory> queryAllProductCategory();
 
-    @Update("INSERT INTO product_category(category_name,category_type) VALUES (#{category_name}, #{category_type})")
-    int addProductCategory(ProductCategory productCategory);
+   // @Update("INSERT INTO product_category(category_name,category_type) VALUES (#{category_name}, #{category_type})")
+
+    @Insert("<script> INSERT INTO product_category "
+            + "(category_name,category_type) "
+            + "VALUES "
+            + "<foreach collection = 'list' item='productCategory' separator=',' > "
+            + " (#{productCategory.category_name},#{productCategory.category_type}) "
+            + "</foreach>"
+            + "</script>")
+    int addProductCategory(@Param("list") List<ProductCategory> list);
 
 }

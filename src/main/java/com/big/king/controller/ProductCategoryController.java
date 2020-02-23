@@ -39,7 +39,7 @@ public class ProductCategoryController {
     * @Author  yangtenglong
     * @Date   2020/2/22 17:49
     */
-    @GetMapping("/categorys/{category_id}")
+    @GetMapping("/category/{category_id}")
     @ResponseStatus(HttpStatus.OK)
     public ResultData findOne(@PathVariable("category_id") Integer category_id){
 
@@ -86,6 +86,7 @@ public class ProductCategoryController {
     public ResultData saveCategory(@RequestBody ProductCategoryVO productCategoryVO){
         try {
             logger.info("新增商品信息：{}"+productCategoryVO.getData());
+            productCategoryService.save(productCategoryVO.getData());
             return ResultData.SUCCESS("");
         } catch (Exception e) {
             e.printStackTrace();

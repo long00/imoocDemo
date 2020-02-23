@@ -12,10 +12,12 @@ package com.big.king.service.impl;
 
 import com.big.king.mapper.ProductCategoryMapper;
 import com.big.king.pojo.po.ProductCategory;
+import com.big.king.pojo.vo.request.ProductCategoryData;
 import com.big.king.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -76,7 +78,18 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
      * @Date 2020/2/22 17:16
      */
     @Override
-    public ProductCategory save(ProductCategory productCategory) {
+    public ProductCategory save(List<ProductCategoryData> productCategory) {
+
+        ProductCategory productCategoryPO = null;
+        List<ProductCategory> productCategoryList = new ArrayList<>();
+        for (ProductCategoryData productCategoryData : productCategory ) {
+            productCategoryPO = new ProductCategory();
+            productCategoryPO.setCategory_name(productCategoryData.getCategory_name());
+            productCategoryPO.setCategory_type(productCategoryData.getCategory_type());
+            productCategoryList.add(productCategoryPO);
+        }
+
+        productCategoryMapper.addProductCategory(productCategoryList);
         return null;
     }
 

@@ -1,6 +1,7 @@
 package com.big.king.service;
 
 import com.big.king.pojo.po.ProductCategory;
+import com.big.king.pojo.vo.request.ProductCategoryData;
 
 import java.util.List;
  /**
@@ -39,6 +40,6 @@ public interface ProductCategoryService {
     * @Date   2020/2/22 17:16
     * 
     */
-     ProductCategory save(ProductCategory productCategory);
+     ProductCategory save(List<ProductCategoryData> productCategory);
     
 }

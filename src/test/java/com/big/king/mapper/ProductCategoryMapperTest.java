@@ -40,7 +40,7 @@ public class ProductCategoryMapperTest {
             ProductCategory productCategory = new ProductCategory();
             productCategory.setCategory_name("大强子");
             productCategory.setCategory_type(25);
-            productCategoryMapper.addProductCategory(productCategory);
+          //  productCategoryMapper.addProductCategory(productCategory);
         } catch (Exception e) {
             e.printStackTrace();
         }
