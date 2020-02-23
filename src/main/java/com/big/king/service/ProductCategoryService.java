@@ -19,9 +19,6 @@ public interface ProductCategoryService {
     * 
     */
     public ProductCategory findOne(Integer category_id);
-
-    
-
     /**
     * @Description 查询所有的产品信息
     * @Author  yangtenglong
@@ -29,9 +26,6 @@ public interface ProductCategoryService {
     * 
     */
     List<ProductCategory> findAll();
-
-
-    
     /**
     * @Description买家端，查询。
     * @Author  yangtenglong
@@ -39,8 +33,6 @@ public interface ProductCategoryService {
     * 
     */
     List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
-
-    
     /**
     * @Description 保存方法
     * @Author  yangtenglong

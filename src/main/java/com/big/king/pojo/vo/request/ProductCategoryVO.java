@@ -1,7 +1,5 @@
 package com.big.king.pojo.vo.request;
 
-import com.big.king.pojo.po.ProductCategory;
-
 import java.util.List;
 
 /**

@@ -31,8 +31,9 @@ public class ProductCategoryController {
 
     @Autowired
     private ProductCategoryService productCategoryService = new ProductCategoryServiceImpl();
+    private ProductCategory productCategory;
 
-    
+
     /**
     * @Description 查询某一条数据
     * @Author  yangtenglong

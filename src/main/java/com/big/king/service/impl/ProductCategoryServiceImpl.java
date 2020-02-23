@@ -80,11 +80,4 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
         return null;
     }
 
-    public ProductCategory getProductCategory() {
-        return productCategory;
-    }
-
-    public void setProductCategory(ProductCategory productCategory) {
-        this.productCategory = productCategory;
-    }
 }
