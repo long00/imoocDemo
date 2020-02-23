@@ -1,6 +1,6 @@
 package com.big.king.service;
 
-import com.big.king.pojo.ProductCategory;
+import com.big.king.pojo.po.ProductCategory;
 
 import java.util.List;
  /**

@@ -1,6 +1,6 @@
 package com.big.king.mapper;
 
-import com.big.king.pojo.ProductCategory;
+import com.big.king.pojo.po.ProductCategory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

@@ -11,7 +11,7 @@
 package com.big.king.service.impl;
 
 import com.big.king.mapper.ProductCategoryMapper;
-import com.big.king.pojo.ProductCategory;
+import com.big.king.pojo.po.ProductCategory;
 import com.big.king.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

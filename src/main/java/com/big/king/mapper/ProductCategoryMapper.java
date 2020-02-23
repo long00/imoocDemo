@@ -1,6 +1,6 @@
 package com.big.king.mapper;
 
-import com.big.king.pojo.ProductCategory;
+import com.big.king.pojo.po.ProductCategory;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

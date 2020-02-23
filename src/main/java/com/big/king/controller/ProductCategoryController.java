@@ -1,6 +1,7 @@
 package com.big.king.controller;
 
-import com.big.king.pojo.ProductCategory;
+import com.big.king.pojo.po.ProductCategory;
+import com.big.king.pojo.vo.request.ProductCategoryVO;
 import com.big.king.service.ProductCategoryService;
 import com.big.king.service.impl.ProductCategoryServiceImpl;
 import com.big.king.utils.ResultData;
@@ -37,7 +38,7 @@ public class ProductCategoryController {
     * @Author  yangtenglong
     * @Date   2020/2/22 17:49
     */
-    @GetMapping("/category/{category_id}")
+    @GetMapping("/categorys/{category_id}")
     @ResponseStatus(HttpStatus.OK)
     public ResultData findOne(@PathVariable("category_id") Integer category_id){
 
@@ -52,14 +53,13 @@ public class ProductCategoryController {
 
     }
 
-
     /**
     * @Description 查询所有信息
     * @Author  yangtenglong
     * @Date   2020/2/22 22:14
     *
     */
-    @GetMapping("/category")
+    @GetMapping("/categorys")
     public ResultData getAll(){
 
         try {
@@ -71,5 +71,24 @@ public class ProductCategoryController {
             return ResultData.ERROR("300","系统异常");
         }
 
+    }
+
+
+    /**
+    * @Description 新增商品
+    * @Author  yangtenglong
+    * @Date   2020/2/23 9:56
+    *
+    */
+    @PostMapping("/category")
+    @ResponseStatus(HttpStatus.CREATED)
+    public ResultData saveCategory(@RequestBody ProductCategoryVO productCategoryVO){
+        try {
+            logger.info("新增商品信息：{}"+productCategoryVO.getData());
+            return ResultData.SUCCESS("");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultData.ERROR("","");
+        }
     }
 }
