@@ -11,9 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 〈商品的实现类〉<br>
- * 〈〉
- *
+ * 〈商品的实现类>
  * @author king
  * @create 2020/02/08
  * @since 1.0.0

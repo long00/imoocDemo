@@ -1,0 +1,16 @@
+1.ProductCategory基本接口：
+http://localhost:8080/productCategory/categorys    GET 获取所有类目信息
+http://localhost:8080/productCategory/category     POST 提交类目
+{
+    "data":[ {
+        "category_name": "炸鸡",
+        "category_type": 5
+    },{
+        "category_name": "汉堡",
+        "category_type": 6
+    },{
+        "category_name": "火腿",
+        "category_type": 7
+    }]
+}
+http://localhost:8080/productCategory/category/1    GET 获取某一个类目
