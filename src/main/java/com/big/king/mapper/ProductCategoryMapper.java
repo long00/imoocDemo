@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 /**
- * 〈商品的mapper类〉<br>
+ * 〈类目的mapper类〉<br>
  * @author king
  * @create 2020/02/08
  * @since 1.0.0

@@ -15,7 +15,7 @@ import java.util.List;
 
 
 /**
- * 〈商品查询的controller类〉<br>
+ * 〈类目 的controller类〉<br>
  * 〈〉
  *
  * @author king

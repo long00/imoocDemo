@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * @Auther: tenglong
  * @Date: 2020/2/23 11:15
- * @Description:
+ * @Description: 类目 的 实体类
  */
 public class ProductCategory {
     private Integer category_id;

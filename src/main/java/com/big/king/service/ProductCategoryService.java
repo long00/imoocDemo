@@ -7,7 +7,7 @@ import java.util.List;
  /**
   *  @author: yangtenglong
   *  @Date: 2020/2/19 9:32
-  *  @Description:
+  *  @Description: 类目的service
   */
 public interface ProductCategoryService {
     
