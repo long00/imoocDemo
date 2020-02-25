@@ -38,7 +38,8 @@ public class ProductCategoryController {
     * @Description 查询某一条数据
     * @Author  yangtenglong
     * @Date   2020/2/22 17:49
-    */    @GetMapping("/category/{category_id}")
+    */
+    @GetMapping("/category/{category_id}")
     @ResponseStatus(HttpStatus.OK)
     public ResultData findOne(@PathVariable("category_id") Integer category_id){
 
