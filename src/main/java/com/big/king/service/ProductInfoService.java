@@ -11,7 +11,6 @@ import java.util.List;
  */
 public interface ProductInfoService {
 
-
     /**
     * @Description 通过商品状态查询
     * @Author  yangtenglong
@@ -19,5 +18,7 @@ public interface ProductInfoService {
     *
     */
     public List<ProductInfo> findByProductStatus(Integer product_status);
+
+
 
 }

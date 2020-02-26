@@ -7,10 +7,7 @@ import com.big.king.utils.ResultData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -48,6 +45,26 @@ public class ProductInfoController {
             e.printStackTrace();
             logger.error("系统通过商品状态，查询商品异常："+e);
         }
+        return ResultData.ERROR("300","系统异常");
+    }
+
+
+    /**
+    * @Description 新增商品信息
+    * @Author  yangtenglong
+    * @Date   2020/2/26 9:59
+    *
+    */
+    @PostMapping("/products")
+    public ResultData saveProductInfo(){
+
+        try {
+            logger.info("");
+            return ResultData.SUCCESS("");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return ResultData.ERROR("300","系统异常");
     }
 
