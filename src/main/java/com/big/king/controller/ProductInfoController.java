@@ -53,6 +53,7 @@ public class ProductInfoController {
     * @Description 新增商品信息
     * @Author  yangtenglong
     * @Date   2020/2/26 9:59
+     *
     *
     */
     @PostMapping("/products")
