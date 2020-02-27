@@ -6,6 +6,7 @@ import com.big.king.pojo.vo.request.ProductCategoryData;
 import com.big.king.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,7 +78,7 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
             productCategoryList.add(productCategoryPO);
         }
 
-        productCategoryMapper.addProductCategory(productCategoryList);
+        int i = productCategoryMapper.addProductCategory(productCategoryList);
         return null;
     }
 

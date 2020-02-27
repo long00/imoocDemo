@@ -9,7 +9,6 @@ import java.math.BigDecimal;
  */
 public class ProductInfoVO {
 
-    private String product_id;
     private String product_name; //商品名称
     private BigDecimal product_price;//单价
     private Integer product_stock;//库存
@@ -17,14 +16,6 @@ public class ProductInfoVO {
     private String product_icon; //小图
     private Integer product_status; //商品状态,0正常1下架
     private Integer category_type; //类目编号
-
-    public String getProduct_id() {
-        return product_id;
-    }
-
-    public void setProduct_id(String product_id) {
-        this.product_id = product_id;
-    }
 
     public String getProduct_name() {
         return product_name;
@@ -85,8 +76,7 @@ public class ProductInfoVO {
     @Override
     public String toString() {
         return "ProductInfoVO{" +
-                "product_id='" + product_id + '\'' +
-                ", product_name='" + product_name + '\'' +
+                "product_name='" + product_name + '\'' +
                 ", product_price=" + product_price +
                 ", product_stock=" + product_stock +
                 ", product_description='" + product_description + '\'' +
