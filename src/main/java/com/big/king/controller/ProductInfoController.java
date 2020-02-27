@@ -59,7 +59,7 @@ public class ProductInfoController {
     public ResultData saveProductInfo(){
 
         try {
-            logger.info("");
+            logger.info("系统传入数据：");
             return ResultData.SUCCESS("");
         } catch (Exception e) {
             e.printStackTrace();
