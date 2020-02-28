@@ -1,6 +1,7 @@
 package com.big.king.controller;
 
 import com.big.king.pojo.po.ProductInfo;
+import com.big.king.pojo.vo.request.ProductInfoVO;
 import com.big.king.service.ProductInfoService;
 import com.big.king.service.impl.ProductInfoServiceImpl;
 import com.big.king.utils.ResultData;
@@ -53,14 +54,14 @@ public class ProductInfoController {
     * @Description 新增商品信息
     * @Author  yangtenglong
     * @Date   2020/2/26 9:59
-     *
     *
     */
     @PostMapping("/products")
-    public ResultData saveProductInfo(){
+    public ResultData saveProductInfo(@RequestBody ProductInfoVO productInfoVO){
 
         try {
-            logger.info("系统传入数据：");
+            logger.info("系统传入数据："+productInfoVO);
+
             return ResultData.SUCCESS("");
         } catch (Exception e) {
             e.printStackTrace();
