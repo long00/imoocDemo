@@ -1,6 +1,7 @@
 package com.big.king.service;
 
 import com.big.king.pojo.po.ProductInfo;
+import com.big.king.pojo.vo.request.ProductInfoVO;
 
 import java.util.List;
 
@@ -19,6 +20,13 @@ public interface ProductInfoService {
     */
     public List<ProductInfo> findByProductStatus(Integer product_status);
 
-
+    
+    /**
+    * @Description 新增商品信息
+    * @Author  yangtenglong
+    * @Date   2020/3/2 18:04
+    * 
+    */
+    public int addProductInfo(ProductInfoVO productInfoVO);
 
 }

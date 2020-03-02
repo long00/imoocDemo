@@ -61,6 +61,7 @@ public class ProductInfoController {
 
         try {
             logger.info("系统传入数据："+productInfoVO);
+            productInfoService.addProductInfo(productInfoVO);
 
             return ResultData.SUCCESS("");
         } catch (Exception e) {

@@ -2,7 +2,12 @@ package com.big.king.service.impl;
 
 import com.big.king.mapper.ProductInfoMapper;
 import com.big.king.pojo.po.ProductInfo;
+import com.big.king.pojo.vo.request.ProductInfoVO;
 import com.big.king.service.ProductInfoService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +25,8 @@ public class ProductInfoServiceImpl implements ProductInfoService {
     ProductInfoMapper productInfoMapper;
     ProductInfo productInfo;
 
+    private static Logger logger = LoggerFactory.getLogger(ProductInfoServiceImpl.class);
+
 
     /**
      * @param product_status
@@ -31,5 +38,29 @@ public class ProductInfoServiceImpl implements ProductInfoService {
     public List<ProductInfo> findByProductStatus(Integer product_status) {
 
         return productInfoMapper.findByProductStatus(product_status);
+    }
+
+
+    /**
+    * @Description 新增商品
+    * @Author  yangtenglong
+    * @Date   2020/3/2 18:01
+    *
+    */
+    @Override
+    public int addProductInfo(ProductInfoVO productInfoVO){
+
+        ProductInfo productInfoPO = new ProductInfo();
+
+        try {
+            BeanUtils.copyProperties(productInfoPO,productInfoVO);
+
+            logger.info(productInfoPO.toString());
+        } catch (BeansException e) {
+            logger.info("新增商品异常："+e);
+        }
+
+
+        return 0;
     }
 }
