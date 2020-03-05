@@ -53,8 +53,8 @@ public class ProductInfoServiceImpl implements ProductInfoService {
         ProductInfo productInfoPO = new ProductInfo();
 
         try {
-            BeanUtils.copyProperties(productInfoPO,productInfoVO);
-
+            /*前一个为传入的数据，后一个为*/
+            BeanUtils.copyProperties(productInfoVO,productInfoPO);
             logger.info(productInfoPO.toString());
         } catch (BeansException e) {
             logger.info("新增商品异常："+e);
