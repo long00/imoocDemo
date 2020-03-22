@@ -35,7 +35,8 @@ public interface ProductInfoMapper {
     *
     */
 
-    @Insert("")
+    @Insert("INSERT INTO product_info (product_name,product_price,product_stock,product_description,product_icon,product_status,category_type)"
+            +"VALUES (#{product_name},#{product_price},#{product_stock},#{product_description},#{product_icon},#{product_status},#{category_type})")
     int addProductInfo(ProductInfo productInfo);
 
 }

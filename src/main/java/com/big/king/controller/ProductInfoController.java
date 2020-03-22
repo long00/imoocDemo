@@ -46,7 +46,7 @@ public class ProductInfoController {
             e.printStackTrace();
             logger.error("系统通过商品状态，查询商品异常："+e);
         }
-        return ResultData.ERROR("300","系统异常");
+        return ResultData.ERROR("500","系统异常");
     }
 
 

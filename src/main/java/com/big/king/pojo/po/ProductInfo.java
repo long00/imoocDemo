@@ -10,7 +10,7 @@ import java.util.Date;
  */
 public class ProductInfo {
 
-    private String product_id;
+    private Integer product_id;
     private String product_name; //商品名称
     private BigDecimal product_price;//单价
     private Integer product_stock;//库存
@@ -21,11 +21,11 @@ public class ProductInfo {
     private Date create_time; //创建时间
     private Date update_time; //修改时间
 
-    public String getProduct_id() {
+    public Integer getProduct_id() {
         return product_id;
     }
 
-    public void setProduct_id(String product_id) {
+    public void setProduct_id(Integer product_id) {
         this.product_id = product_id;
     }
 
