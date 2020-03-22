@@ -29,6 +29,15 @@ public interface ProductInfoMapper {
 
 
     /**
+     *  @author: yangtenglong
+     *  @Date: 2020/3/22 23:09
+     *  @Description: 通过ID查询某一条
+     */
+    ProductInfo findOne();
+
+
+
+    /**
     * @Description 新增商品
     * @Author  yangtenglong
     * @Date   2020/2/25 21:33
