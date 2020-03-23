@@ -51,6 +51,23 @@ public class ProductInfoController {
 
 
     /**
+     *  @author: yangtenglong
+     *  @Date: 2020/3/23 22:30
+     *  @Description:通过ID查询商品的某条信息
+     */
+    @GetMapping("/productById/{product_Id}")
+    public ResultData findOneById(@PathVariable("product_Id") Integer product_Id){
+        try {
+            logger.info("系统输入的ID为：");
+            return ResultData.SUCCESS("");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultData.ERROR("500","系统异常：查询失败。");
+        }
+    }
+
+
+    /**
     * @Description 新增商品信息
     * @Author  yangtenglong
     * @Date   2020/2/26 9:59
