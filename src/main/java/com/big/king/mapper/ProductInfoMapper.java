@@ -33,7 +33,7 @@ public interface ProductInfoMapper {
      *  @Date: 2020/3/22 23:09
      *  @Description: 通过ID查询某一条
      */
-    @Select("SELECT")
+    @Select("SELECT product_id,product_name,product_price,product_stock,product_description,product_icon,product_status,category_type FROM `product_info` WHERE product_id =#{product_id}")
     ProductInfo findOne(@Param("product_id") Integer product_id);
 
 

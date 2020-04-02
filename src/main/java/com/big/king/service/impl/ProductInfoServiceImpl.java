@@ -7,7 +7,6 @@ import com.big.king.service.ProductInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -60,5 +59,16 @@ public class ProductInfoServiceImpl implements ProductInfoService {
             return productInfoMapper.addProductInfo(productInfoPO);
         }
 
+    }
+
+    /**
+     * @param product_id
+     * @author: yangtenglong
+     * @Date: 2020/4/2 18:13
+     * @Description:通过ID查询某个商品
+     */
+    @Override
+    public ProductInfo findByProductId(Integer product_id) {
+        return productInfoMapper.findOne(product_id);
     }
 }

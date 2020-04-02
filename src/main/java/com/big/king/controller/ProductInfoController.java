@@ -58,8 +58,9 @@ public class ProductInfoController {
     @GetMapping("/productById/{product_Id}")
     public ResultData findOneById(@PathVariable("product_Id") Integer product_Id){
         try {
-            logger.info("系统输入的ID为：");
-            return ResultData.SUCCESS("");
+            logger.info("系统输入的商品ID为："+product_Id);
+            ProductInfo productInfo = productInfoService.findByProductId(product_Id);
+            return ResultData.SUCCESS(productInfo);
         } catch (Exception e) {
             e.printStackTrace();
             return ResultData.ERROR("500","系统异常：查询失败。");

@@ -29,4 +29,11 @@ public interface ProductInfoService {
     */
     public int addProductInfo(ProductInfoVO productInfoVO);
 
+
+    /**
+     *  @author: yangtenglong
+     *  @Date: 2020/4/2 18:13
+     *  @Description:通过ID查询某个商品
+     */
+    public ProductInfo findByProductId(Integer product_id);
 }
