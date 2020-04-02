@@ -1,0 +1,7 @@
+$(
+    function t() {
+        alert("rrrrr");
+    }
+)
+
+
